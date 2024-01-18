@@ -13,6 +13,10 @@ export default function HomeScreen() {
     navigation.navigate("ScrollView");
   };
 
+  const navigateToFlatListScreen = () => {
+    navigation.navigate("FlatList");
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Olá, Mundo!</Text>
@@ -30,6 +34,13 @@ export default function HomeScreen() {
         onPress={navigateToScrollViewScreen}
       >
         <Text style={styles.buttonText}>Aula de ScrollView</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.8}
+        style={styles.button}
+        onPress={navigateToFlatListScreen}
+      >
+        <Text style={styles.buttonText}>Aula de FlatList</Text>
       </TouchableOpacity>
     </View>
   );
