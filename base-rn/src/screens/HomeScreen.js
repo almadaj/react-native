@@ -9,6 +9,10 @@ export default function HomeScreen() {
     navigation.navigate("Navigation");
   };
 
+  const navigateToScrollViewScreen = () => {
+    navigation.navigate("ScrollView");
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Olá, Mundo!</Text>
@@ -19,6 +23,13 @@ export default function HomeScreen() {
         onPress={navigateToNavigationScreen}
       >
         <Text style={styles.buttonText}>Aula de Navegação</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.8}
+        style={styles.button}
+        onPress={navigateToScrollViewScreen}
+      >
+        <Text style={styles.buttonText}>Aula de ScrollView</Text>
       </TouchableOpacity>
     </View>
   );
