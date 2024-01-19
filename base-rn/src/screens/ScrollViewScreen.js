@@ -6,6 +6,9 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
+import NavButton from "../components/NavButton";
+import Title from "../components/Title";
+import Container from "../components/Container";
 
 export default function ScrollViewScreen() {
   const navigation = useNavigation();
@@ -13,15 +16,9 @@ export default function ScrollViewScreen() {
     navigation.goBack();
   };
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>ScrollView</Text>
-      <TouchableOpacity
-        activeOpacity={0.8}
-        style={styles.button}
-        onPress={navigateBack}
-      >
-        <Text style={styles.buttonText}>Voltar</Text>
-      </TouchableOpacity>
+    <Container>
+      <Title text={"ScrollView"} />
+      <NavButton text={"Voltar"} onPress={navigateBack} />
       <ScrollView style={styles.container} showsVerticalScrollIndicator={true}>
         <Text style={styles.item}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed
@@ -66,33 +63,13 @@ export default function ScrollViewScreen() {
           Nullam vitae luctus ex. Vivamus lacinia ex sed nulla.
         </Text>
       </ScrollView>
-    </View>
+    </Container>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 16,
-    marginHorizontal: 3,
-    marginVertical: 32,
-  },
-  title: {
-    fontSize: 40,
-    color: "#f64348",
-  },
   item: {
     fontSize: 16,
     marginTop: 16,
-  },
-  button: {
-    backgroundColor: "#1c1a1d",
-    padding: 10,
-    borderRadius: 10,
-    marginTop: 20,
-    width: 60,
-  },
-  buttonText: {
-    color: "#fff",
   },
 });
