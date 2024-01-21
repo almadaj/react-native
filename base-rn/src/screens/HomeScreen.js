@@ -1,9 +1,9 @@
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import NavButton from "../components/NavButton";
 import Title from "../components/Title";
 import Container from "../components/Container";
+import StyledTitle from "../components/StyledTitle";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -25,7 +25,7 @@ export default function HomeScreen() {
 
   return (
     <Container>
-      <Title text={"Olá, Mundo!"} />
+      <StyledTitle>Olá, Meu Mundo!</StyledTitle>
       <StatusBar style="auto" />
       <NavButton text={"Aula de Navegação"} onPress={toNavigationScreen} />
       <NavButton text={"Aula de ScrollView"} onPress={toScrollViewScreen} />
