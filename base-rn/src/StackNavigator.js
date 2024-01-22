@@ -5,6 +5,7 @@ import NavigationScreen from "./screens/NavigationScreen";
 import ScrollViewScreen from "./screens/ScrollViewScreen";
 import FlatListScreen from "./screens/FlatListScreen";
 import StyledComponentsScreen from "./screens/StyledComponentsScreen";
+import UsingApiScreen from "./screens/UsingApiScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ export default function StackNavigatior() {
         <Stack.Screen name="ScrollView" component={ScrollViewScreen} />
         <Stack.Screen name="FlatList" component={FlatListScreen} />
         <Stack.Screen name="Styled" component={StyledComponentsScreen} />
+        <Stack.Screen name="API" component={UsingApiScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
