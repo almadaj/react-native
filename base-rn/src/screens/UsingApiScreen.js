@@ -5,9 +5,10 @@ import StyledTitle from "../components/StyledTitle";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Image, StyleSheet, Text } from "react-native";
+
 export default function UsingApiScreen() {
-  const navigation = useNavigation();
   const [user, setUser] = useState({});
+  const navigation = useNavigation();
 
   const navigateBack = () => {
     navigation.goBack();
@@ -24,7 +25,7 @@ export default function UsingApiScreen() {
 
   return (
     <Container>
-      <StyledTitle> Consumindo API</StyledTitle>
+      <StyledTitle>Consumindo API</StyledTitle>
       <Text style={styles.text}>{user.name}</Text>
       <Text>{user.bio}</Text>
       <Image source={{ uri: user.avatar_url }} style={styles.avatar} />

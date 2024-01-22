@@ -25,6 +25,9 @@ export default function HomeScreen() {
   const toApiScreen = () => {
     navigation.navigate("API");
   };
+  const toSampleApiScreen = () => {
+    navigation.navigate("SampleAPI");
+  };
 
   return (
     <Container>
@@ -35,6 +38,7 @@ export default function HomeScreen() {
       <NavButton text={"Aula de FlatList"} onPress={toFlatListScreen} />
       <NavButton text={"Aula de Styled Components"} onPress={toStyledScreen} />
       <NavButton text={"Aula de API"} onPress={toApiScreen} />
+      <NavButton text={"Exemplo de API"} onPress={toSampleApiScreen} />
     </Container>
   );
 }
