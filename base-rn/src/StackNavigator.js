@@ -7,7 +7,7 @@ import FlatListScreen from "./screens/FlatListScreen";
 import StyledComponentsScreen from "./screens/StyledComponentsScreen";
 import UsingApiScreen from "./screens/UsingApiScreen";
 import SampleApiScreen from "./screens/SampleApiScreen";
-
+import AccelerometerScreen from "./screens/AccelerometerScreen";
 const Stack = createNativeStackNavigator();
 
 export default function StackNavigatior() {
@@ -24,6 +24,7 @@ export default function StackNavigatior() {
         <Stack.Screen name="Styled" component={StyledComponentsScreen} />
         <Stack.Screen name="API" component={UsingApiScreen} />
         <Stack.Screen name="SampleAPI" component={SampleApiScreen} />
+        <Stack.Screen name="Accelerometer" component={AccelerometerScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

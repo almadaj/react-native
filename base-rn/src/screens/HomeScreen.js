@@ -28,6 +28,9 @@ export default function HomeScreen() {
   const toSampleApiScreen = () => {
     navigation.navigate("SampleAPI");
   };
+  const toAccelerometerScreen = () => {
+    navigation.navigate("Accelerometer");
+  };
 
   return (
     <Container>
@@ -39,6 +42,7 @@ export default function HomeScreen() {
       <NavButton text={"Aula de Styled Components"} onPress={toStyledScreen} />
       <NavButton text={"Aula de API"} onPress={toApiScreen} />
       <NavButton text={"Exemplo de API"} onPress={toSampleApiScreen} />
+      <NavButton text={"Uso do Acelerômetro"} onPress={toAccelerometerScreen} />
     </Container>
   );
 }
